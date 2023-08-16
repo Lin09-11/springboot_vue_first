@@ -1,5 +1,6 @@
 package com.xiaolin.springboot.service;
 
+import com.xiaolin.springboot.controller.dto.UserDTO;
 import com.xiaolin.springboot.entity.User;
 import com.baomidou.mybatisplus.extension.service.IService;
 
@@ -13,4 +14,5 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface IUserService extends IService<User> {
 
+    UserDTO login(UserDTO userDTO);
 }

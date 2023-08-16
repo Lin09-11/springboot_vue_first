@@ -5,20 +5,22 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import java.io.Serializable;
 import java.time.LocalDateTime;
+
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 /**
  * <p>
- * 
+ *
  * </p>
  *
  * @author 小林
  * @since 2023-07-30
  */
-@Getter
-@Setter
-  @TableName("sys_user")
+@Data
+@TableName("sys_user")
 public class User implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -67,7 +69,7 @@ public class User implements Serializable {
       /**
      * 图片链接
      */
-      private String avatar;
+      private String avatarUrl;
 
 
 }
