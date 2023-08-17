@@ -1,0 +1,20 @@
+//引入mock.js
+import { Mock } from "mockjs";
+//设置延迟时间
+Mock.setup({
+  timeout:4000
+})
+//使用mockjs模拟数据
+//这个链接地址要和前端axios发送的地址要一致才可以进行拦截
+Mock.mock('/product/search',{
+  "ret":0,
+  "data":{
+    "mtime":"@datetime",//随机生成日期时间
+    "score|1-800":1,
+    "rank|1-100":1,
+    "stars|1--5":1,
+    "nickname":"@cname",//随机生成中文名字
+    //生成图片
+    "img":"@image('200*10')"
+    }
+});
